@@ -1,16 +1,28 @@
 body { background: url("http://themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa") repeat-x fixed center top #111111; color: #333; margin: 0;
 height: 100%;}
+
+.menu{
+  width: 800px;
+  height:60px;
+  margin: 10px auto;
+  position: relative;
+  background:url("http://www.blogblog.com/1kt/transparent/white80.png") repeat scroll left top transparent;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
 .content {
   width: 800px;
   margin: 0 auto;
   position: relative;
   background:url("http://www.blogblog.com/1kt/transparent/white80.png") repeat scroll left top transparent;
+  -moz-border-radius: 20px 20px 20px 20px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .block {
   background-color:#FFF;
   padding: 20px;
-  margin: 30px 80px 10px 20px;
+  margin: 30px 280px 10px 20px;
 }
 
 body, p, ol, ul, td {
