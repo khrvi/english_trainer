@@ -1,0 +1,24 @@
+<div id="content">
+  <h1 id="stats" style="float:left;"><%= @words.total_entries %> Accounts</h1>
+  <div style="clear:both;"></div>
+  <%= will_paginate @words %>
+
+  <table>
+    <thead>
+      <tr id="header">
+        <th class="">English</th>
+        <th class="">Russian</th>
+      </tr>
+    </thead>
+    <% @words.each do |word| %>
+      <tr id="user-<%= user.id %>">
+        <td>
+          <strong><%= word %></strong>
+        </td>
+        <td><%= translate(word) %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= will_paginate @words %>
+</div>

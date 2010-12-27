@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/elisehuard/google_translate.git
+  revision: 07113ac81725bcbbe0ec8021f1a1c2001723115c
+  specs:
+    google_translate (0.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -69,5 +75,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  google_translate!
   mysql
   rails (= 3.0.3)
