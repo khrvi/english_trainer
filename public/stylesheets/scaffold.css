@@ -25,6 +25,13 @@ height: 100%;}
   margin: 30px 280px 10px 20px;
 }
 
+.right_block{
+  background-color:#FFF;
+  float: right;
+  padding: 20px;
+  margin: 30px 10px 10px 10px;
+}
+
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;

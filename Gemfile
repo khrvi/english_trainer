@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql'
 gem 'google_translate'
 gem 'will_paginate', '~> 3.0.pre2'
+gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'
 

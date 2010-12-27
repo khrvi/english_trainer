@@ -1,6 +1,7 @@
 class WordsController < ApplicationController
   # GET /words
   # GET /words.xml
+    before_filter :authenticate_user!, :except => :index
   def index
     @words = Word.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
