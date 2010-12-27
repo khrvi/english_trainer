@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   # GET /words
   # GET /words.xml
   def index
-    @words = Word.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 20
+    @words = Word.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
