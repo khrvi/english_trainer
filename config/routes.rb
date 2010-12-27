@@ -1,4 +1,6 @@
 EnglishTrainer::Application.routes.draw do
+  resources :dictionaries
+
   resources :words
 
   # The priority is based upon order of creation:

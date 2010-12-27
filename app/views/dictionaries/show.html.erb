@@ -1,11 +1,10 @@
-<h1>Vocabulary</h1>
+<p id="notice"><%= notice %></p>
 
+<h1>Dictionary: <%= @dictionary.name %></h1>
 <div id="content" class='block'>
   <h1 id="stats" style="float:left;"><%= @words.total_entries %> words</h1>
   <div style="clear:both;"></div>
-  <%= link_to 'New Word', new_word_path %>
-  <%= link_to 'Dictionaries', dictionaries_path %>
-  
+  <%= link_to 'New Word', new_word_path(:word => {:dictionary_id => @dictionary.id}) %>
   <%= will_paginate @words %>
 
   <table class='standard'>
@@ -31,9 +30,6 @@
     <% end %>
   </table>
 
-  <%= will_paginate @words %>
-</div>
 
-<br />
-
-<%= link_to 'New Word', new_word_path %>
+<%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
+<%= link_to 'Back', dictionaries_path %>

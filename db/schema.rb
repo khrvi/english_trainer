@@ -10,12 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101227124324) do
+ActiveRecord::Schema.define(:version => 20101227154402) do
+
+  create_table "dictionaries", :force => true do |t|
+    t.string  "name"
+    t.string  "desc"
+    t.integer "user_id"
+  end
 
   create_table "words", :force => true do |t|
     t.string   "word"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "dictinary_id"
   end
 
 end

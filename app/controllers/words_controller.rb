@@ -24,7 +24,7 @@ class WordsController < ApplicationController
   # GET /words/new
   # GET /words/new.xml
   def new
-    @word = Word.new
+    @word = Word.new(params[:word])
 
     respond_to do |format|
       format.html # new.html.erb
