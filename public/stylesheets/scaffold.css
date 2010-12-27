@@ -1,4 +1,17 @@
-body { background-color: #fff; color: #333; }
+body { background: url("http://themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa") repeat-x fixed center top #111111; color: #333; margin: 0;
+height: 100%;}
+.content {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background:url("http://www.blogblog.com/1kt/transparent/white80.png") repeat scroll left top transparent;
+}
+
+.block {
+  background-color:#FFF;
+  padding: 20px;
+  margin: 30px 80px 10px 20px;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -54,3 +67,11 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+.standard{margin-left:10px;border-spacing:0;border:1px solid #d7d7d7;-moz-border-radius:15px 15px 0 0;-webkit-border-radius:15px  15px 0 0;-o-border-radius:15px  15px 0 0;border-radius:15px  15px 0 0;color:#0e1215;margin-right:20px;}
+.standard th{background:#c9e4ff;text-align:left;height:71px;padding:15px 20px 10px 15px;vertical-align:top;}
+.standard th:first-child{-moz-border-radius:15px 0 0 0;-webkit-border-radius:15px 0 0 0;-o-border-radius:15px 0 0 0;border-radius:15px  0 0 0;}
+.standard th:last-child{-moz-border-radius: 0 15px 0 0;-webkit-border-radius: 0 15px 0 0;-o-border-radius: 0 15px 0 0;border-radius:0  15px 0 0;}
+.standard td{border-top:1px solid #d7d7d7;height:71px;padding:17px 30px 13px 15px;vertical-align:top;}
+.standard tr.alt{background-color:#ebf0f6;}
+.standard a{color:#23383d}
+.standard a.completed{background:#c9e4ff;padding:4px 6px 6px;}
