@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/elisehuard/google_translate.git
-  revision: 07113ac81725bcbbe0ec8021f1a1c2001723115c
-  specs:
-    google_translate (0.0.3)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -38,14 +32,19 @@ GEM
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    google_translate (0.0.3)
+      mechanize (>= 0.7.7)
     i18n (0.5.0)
     mail (2.2.13)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (1.0.0)
+      nokogiri (>= 1.2.1)
     mime-types (1.16)
     mysql (2.8.1)
+    nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -70,11 +69,13 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  google_translate!
+  google_translate
   mysql
   rails (= 3.0.3)
+  will_paginate (~> 3.0.pre2)

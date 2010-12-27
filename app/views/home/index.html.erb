@@ -1,5 +1,5 @@
 <div id="content">
-  <h1 id="stats" style="float:left;"><%= @words.total_entries %> Accounts</h1>
+  <h1 id="stats" style="float:left;"><%= @words.total_entries %> Words</h1>
   <div style="clear:both;"></div>
   <%= will_paginate @words %>
 
@@ -11,11 +11,11 @@
       </tr>
     </thead>
     <% @words.each do |word| %>
-      <tr id="user-<%= user.id %>">
+      <tr>
         <td>
-          <strong><%= word %></strong>
+          <strong><%= word.word %></strong>
         </td>
-        <td><%= translate(word) %></td>
+        <td><%= translate(word).html_safe %></td>
       </tr>
     <% end %>
   </table>

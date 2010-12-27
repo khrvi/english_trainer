@@ -6,8 +6,8 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
-gem 'google_translate', :git => 'https://github.com/elisehuard/google_translate.git'
-
+gem 'google_translate'
+gem 'will_paginate', '~> 3.0.pre2'
 # Use unicorn as the web server
 # gem 'unicorn'
 
