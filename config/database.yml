@@ -1,0 +1,21 @@
+development:
+  adapter: mysql
+  database: english_trainer_development
+  encoding: utf8
+  username: root
+  password: 
+
+test:
+  adapter: mysql
+  database: english_trainer_test
+  encoding: utf8
+  username: root
+  password: 
+  host: localhost
+
+production:
+   adapter: mysql
+   database: english_trainer_production
+   encoding: utf8
+   username: root
+   password: 
