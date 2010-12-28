@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101228101949) do
+ActiveRecord::Schema.define(:version => 20101228122702) do
 
   create_table "dictionaries", :force => true do |t|
     t.string  "name"
