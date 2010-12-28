@@ -2,5 +2,12 @@
 
 <iframe width='790px' height='350px' src=<%= "http://www.google.com/dictionary?aq=f&langpair=en|ru&q=#{@word.word}&hl=en" %>>
 </iframe><br/>
-<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %>
+
+<% content_for :menu do %>
+  <%= link_to 'Edit', edit_word_path(@word) %> |
+  <%= link_to 'Back', words_path %>
+<% end %>
+<% content_for :menu_bottom do %>
+  <%= link_to 'Edit', edit_word_path(@word) %> |
+  <%= link_to 'Back', words_path %>
+<% end %>

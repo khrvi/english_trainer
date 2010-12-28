@@ -3,9 +3,6 @@
 <div id="content" class='block'>
   <h1 id="stats" style="float:left;"><%= @words.total_entries %> words</h1>
   <div style="clear:both;"></div>
-  <%= link_to 'New Word', new_word_path %>
-  <%= link_to 'Dictionaries', dictionaries_path %>
-  
   <%= will_paginate @words %>
 
   <table class='standard'>
@@ -13,7 +10,7 @@
       <tr id="header">
         <th class="">English</th>
         <th class="">Russian</th>
-        <th colspan='2'>Actions</th>
+        <% if current_user %><th colspan='2'>Actions</th><%end%>
         
       </tr>
     </thead>
@@ -23,10 +20,11 @@
           <strong><%= word.word %></strong>
         </td>
         <td><%= link_to translate(word).html_safe, word %></td>
-
+        <% if current_user %>
         <!-- <td><%= link_to 'Show', word %></td> -->
         <td><%= link_to 'Edit', edit_word_path(word) %></td>
         <td><%= link_to 'Destroy', word, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
       </tr>
     <% end %>
   </table>
@@ -35,7 +33,17 @@
 </div>
 <br />
 
-<%= link_to 'New Word', new_word_path %>
-<% content_for :right_block do %>
-
+<% if current_user %>
+  <% content_for :menu do %>
+    <%= link_to 'New Word', new_word_path %> |
+    <%= link_to 'Dictionaries', dictionaries_path %>
+  <% end %>
+  <% content_for :menu_bottom do %>
+    <%= link_to 'New Word', new_word_path %> |
+    <%= link_to 'Dictionaries', dictionaries_path %>
+  <% end %>
+<% else %>
+  <% content_for :right_block do %>
+    <%= render :partial => 'user_sessions/form' %>
+  <% end %>
 <% end %>

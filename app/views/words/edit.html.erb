@@ -2,5 +2,12 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @word %> |
-<%= link_to 'Back', words_path %>
+
+<% content_for :menu do %>
+  <%= link_to 'Show', @word %> |
+  <%= link_to 'Back', words_path %>
+<% end %>
+<% content_for :menu_bottom do %>
+  <%= link_to 'Show', @word %> |
+  <%= link_to 'Back', words_path %>
+<% end %>

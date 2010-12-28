@@ -8,26 +8,49 @@
 </head>
 <body>
   <div class='menu'>
-    <%= yield :menu %>
+    <div class='left_nav'>
+      <%= yield :menu %>
+    </div>
+    <div class='nav'>
+    <% if current_user %>
+      <%= link_to 'Edit profile', edit_user_path(:current) %>
+      <%= link_to 'Logout', logout_path %>
+    <% else %>
+      <%= link_to 'Register', new_user_path %> |
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
+    </div>
   </div>
   <div class='content'>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <table>
-        <tr>
-          <td width='500px'>
-            <%= yield %>
-          </td>
-          <td width='200px'>
-            <div  class='right_block'>
-              <%= yield :right_block %>
-            </div>
-          </td>
-        </tr>
-      </table>
-      </thead>
-    
-    
+    <table class='main_table'>
+      <tr>
+        <td width='500px'>
+          <%= yield %>
+        </td>
+        <td width='200px'>
+          <div class='right_block'>
+            <%= yield :right_block %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='menu'>
+    <div class='left_nav'>
+      <%= yield :menu_bottom %>
+    </div>
+    <div class='nav'>
+    <% if current_user %>
+      <%= link_to 'Edit profile', edit_user_path(:current) %>
+      <%= link_to 'Logout', logout_path %>
+    <% else %>
+      <%= link_to 'Register', new_user_path %>
+      <%= link_to 'Login', new_user_session_path %>
+    <% end %>
+    </div>
   </div>
 </body>
 </html>
