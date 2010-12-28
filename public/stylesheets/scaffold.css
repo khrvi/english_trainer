@@ -10,14 +10,15 @@ height: 100%;}
   -moz-border-radius: 20px 20px 20px 20px;
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
-.nav{
+div.nav{
   float: right;
   margin: 20px;
 }
-.left_nav{
+div.left_nav{
   float: left;
   margin: 20px;
 }
+div.nav > a, div.left_nav > a {text-decoration: none;font-size: 17px;}
 .content {
   width: 800px;
   margin: 0 auto;
