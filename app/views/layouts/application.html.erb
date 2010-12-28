@@ -13,7 +13,21 @@
   <div class='content'>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <table>
+        <tr>
+          <td width='500px'>
+            <%= yield %>
+          </td>
+          <td width='200px'>
+            <div  class='right_block'>
+              <%= yield :right_block %>
+            </div>
+          </td>
+        </tr>
+      </table>
+      </thead>
+    
+    
   </div>
 </body>
 </html>
