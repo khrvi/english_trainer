@@ -1,8 +1,9 @@
 class DictionariesController < ApplicationController
   # GET /dictionaries
   # GET /dictionaries.xml
+  before_filter :require_user
   def index
-    @dictionaries = Dictionary.paginate :page => params[:page], :per_page => 10
+    @dictionaries = current_user.dictionaries.paginate :page => params[:page], :per_page => 10
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class DictionariesController < ApplicationController
   # GET /dictionaries/1
   # GET /dictionaries/1.xml
   def show
-    @dictionary = Dictionary.find(params[:id])
+    @dictionary = current_user.dictionaries.find(params[:id])
     @words = @dictionary.words.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
     respond_to do |format|
@@ -25,7 +26,7 @@ class DictionariesController < ApplicationController
   # GET /dictionaries/new
   # GET /dictionaries/new.xml
   def new
-    @dictionary = Dictionary.new
+    @dictionary = current_user.dictionaries.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +36,13 @@ class DictionariesController < ApplicationController
 
   # GET /dictionaries/1/edit
   def edit
-    @dictionary = Dictionary.find(params[:id])
+    @dictionary = current_user.dictionaries.find(params[:id])
   end
 
   # POST /dictionaries
   # POST /dictionaries.xml
   def create
-    @dictionary = Dictionary.new(params[:dictionary])
+    @dictionary = current_user.dictionaries.new(params[:dictionary])
 
     respond_to do |format|
       if @dictionary.save
@@ -57,7 +58,7 @@ class DictionariesController < ApplicationController
   # PUT /dictionaries/1
   # PUT /dictionaries/1.xml
   def update
-    @dictionary = Dictionary.find(params[:id])
+    @dictionary = current_user.dictionaries.find(params[:id])
 
     respond_to do |format|
       if @dictionary.update_attributes(params[:dictionary])
@@ -73,7 +74,7 @@ class DictionariesController < ApplicationController
   # DELETE /dictionaries/1
   # DELETE /dictionaries/1.xml
   def destroy
-    @dictionary = Dictionary.find(params[:id])
+    @dictionary = current_user.dictionaries.find(params[:id])
     @dictionary.destroy
 
     respond_to do |format|

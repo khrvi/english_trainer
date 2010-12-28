@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
-  # GET /words
-  # GET /words.xml
+  before_filter :require_user, :only => [:new, :edit, :create, :update, :destroy]
+
   def index
     @words = Word.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
     @user_session = UserSession.new
@@ -44,7 +44,7 @@ class WordsController < ApplicationController
 
     respond_to do |format|
       if @word.save
-        format.html { redirect_to( words_path, :notice => 'Word was successfully created.') }
+        format.html { redirect_to( dictionary_path(@word.dictionary), :notice => 'Word was successfully created.') }
         format.xml  { render :xml => @word, :status => :created, :location => @word }
       else
         format.html { render :action => "new" }
@@ -73,10 +73,11 @@ class WordsController < ApplicationController
   # DELETE /words/1.xml
   def destroy
     @word = Word.find(params[:id])
+    dic = @word.dictionary
     @word.destroy
 
     respond_to do |format|
-      format.html { redirect_to(words_url) }
+      format.html { redirect_to(dictionary_url(dic)) }
       format.xml  { head :ok }
     end
   end
