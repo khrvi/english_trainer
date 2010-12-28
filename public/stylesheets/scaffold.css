@@ -1,8 +1,8 @@
-body { background: url("http://themes.googleusercontent.com/image?id=1OACCYOE0-eoTRTfsBuX1NMN9nz599ufI1Jh0CggPFA_sK80AGkIr8pLtYRpNUKPmwtEa") repeat-x fixed center top #111111; color: #333; margin: 0;
+body { background: url("/images/bg_image.jpg") repeat-x fixed center top #111111; color: #333; margin: 0;
 height: 100%;}
 
 .menu{
-  width: 800px;
+  width: 830px;
   height:60px;
   margin: 10px auto;
   position: relative;
@@ -22,7 +22,7 @@ div.left_nav{
 }
 div.nav > a, div.left_nav > a {text-decoration: none;font-size: 17px;}
 .content {
-  width: 800px;
+  width: 830px;
   margin: 0 auto;
   position: relative;
   background:url("http://www.blogblog.com/1kt/transparent/white80.png") repeat scroll left top transparent;
@@ -35,7 +35,7 @@ div.nav > a, div.left_nav > a {text-decoration: none;font-size: 17px;}
 .main_table{
   margin: 15px;
 }
-
+.main_table td{vertical-align:top;}
 .block {
   background-color:#FFF;
   padding: 20px;
@@ -46,10 +46,8 @@ div.nav > a, div.left_nav > a {text-decoration: none;font-size: 17px;}
 }
 
 .right_block{
-/*  background-color:#FFF;*/
   float: left;
-  padding: 20px;
-  margin: 30px 10px 10px 10px;
+  padding-left:20px;
 }
 
 body, p, ol, ul, td {
@@ -106,7 +104,7 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-.standard{margin-left:10px;border-spacing:0;border:1px solid #d7d7d7;-moz-border-radius:15px 15px 0 0;-webkit-border-radius:15px  15px 0 0;-o-border-radius:15px  15px 0 0;border-radius:15px  15px 0 0;color:#0e1215;margin-right:20px;}
+.standard{width:100%;margin-left:10px;margin-right:10px;border-spacing:0;border:1px solid #d7d7d7;-moz-border-radius:15px 15px 0 0;-webkit-border-radius:15px  15px 0 0;-o-border-radius:15px  15px 0 0;border-radius:15px  15px 0 0;color:#0e1215;margin-right:20px;}
 .standard th{background:#c9e4ff;text-align:left;height:71px;padding:15px 20px 10px 15px;vertical-align:top;}
 .standard th:first-child{-moz-border-radius:15px 0 0 0;-webkit-border-radius:15px 0 0 0;-o-border-radius:15px 0 0 0;border-radius:15px  0 0 0;}
 .standard th:last-child{-moz-border-radius: 0 15px 0 0;-webkit-border-radius: 0 15px 0 0;-o-border-radius: 0 15px 0 0;border-radius:0  15px 0 0;}

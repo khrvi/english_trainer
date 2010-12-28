@@ -3,7 +3,6 @@
 <div id="content" class='block'>
   <h1 id="stats" style="float:left;"><%= @dictionaries.total_entries %> dictionaries</h1>
   <div style="clear:both;"></div>
-  <%= link_to 'New dictionary', new_dictionary_path %>
   <%= will_paginate @dictionaries %>
 
   <table class='standard'>
@@ -32,4 +31,9 @@
 
 <br />
 
-<%= link_to 'New Dictionary', new_dictionary_path %>
+<% content_for :menu do %>
+  <%= link_to 'New Dictionary', new_dictionary_path %>
+<% end %>
+<% content_for :menu_bottom do %>
+  <%= link_to 'New Dictionary', new_dictionary_path %>
+<% end %>

@@ -2,5 +2,11 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @dictionary %> |
-<%= link_to 'Back', dictionaries_path %>
+<% content_for :menu do %>
+  <%= link_to 'Show', @dictionary %> |
+  <%= link_to 'Back', dictionaries_path %>
+<% end %>
+<% content_for :menu_bottom do %>
+  <%= link_to 'Show', @dictionary %> |
+  <%= link_to 'Back', dictionaries_path %>
+<% end %>

@@ -4,7 +4,6 @@
 <div id="content" class='block'>
   <h1 id="stats" style="float:left;"><%= @words.total_entries %> words</h1>
   <div style="clear:both;"></div>
-  <%= link_to 'New Word', new_word_path(:word => {:dictionary_id => @dictionary.id}) %>
   <%= will_paginate @words %>
 
   <table class='standard'>
@@ -29,7 +28,14 @@
       </tr>
     <% end %>
   </table>
-
-
-<%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
-<%= link_to 'Back', dictionaries_path %>
+  
+<% content_for :menu do %>
+  <%= link_to 'New Word', new_word_path(:word => {:dictionary_id => @dictionary.id}) %> |
+  <%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
+  <%= link_to 'Back', dictionaries_path %>
+<% end %>
+<% content_for :menu_bottom do %>
+  <%= link_to 'New Word', new_word_path(:word => {:dictionary_id => @dictionary.id}) %> |
+  <%= link_to 'Edit', edit_dictionary_path(@dictionary) %> |
+  <%= link_to 'Back', dictionaries_path %>
+<% end %>
